@@ -66,7 +66,7 @@ jogo-iq-vhdl/
 
 1. **Init**: Estado inicial - reseta todos os registradores e contadores
 2. **Setup**: Jogador seleciona nível (0-3) e código (0-3) via switches
-3. **Play_FPGA**: FPGA exibe o padrão nos LEDs por tempo variável
+3. **Play_FPGA**: FPGA exibe o padrão nos display HEX por tempo variável
 4. **Play_user**: Jogador tem 10 segundos para reproduzir o padrão
 5. **Count_Round**: Incrementa a rodada e calcula bônus
 6. **Check**: Verifica se o jogo terminou (15 rodadas ou bônus zerado)
@@ -170,13 +170,6 @@ end process;
 1. Adicionar `E` e `D` na lista de sensibilidade
 2. Mover a verificação `if E = '1'` para **fora** do `elsif rising_edge(clock)`
 3. O registrador atualizaria imediatamente quando E='1', sem esperar o clock
-
-**⚠️ IMPORTANTE:** Esta modificação **NÃO é recomendada** em projetos reais porque:
-- Cria um **latch** em vez de um flip-flop
-- Pode gerar comportamento imprevisível e glitches
-- Dificulta a síntese e timing closure
-- Em FPGAs, latches são implementados de forma ineficiente
-
 ---
 
 ### 4. Caso quiser substituir C por "J" de jogo, nos displays de 7 segmentos, o que deveria ser feito?
@@ -256,10 +249,6 @@ count_reg <= count_reg - 1;  -- Contaria: 0→15→14→...→1→0
 3. **Terminal Count prematuro**: O sinal `tc` detecta quando `count_reg = "1111"`. Isso aconteceria **logo na primeira jogada** (0-1=15), fazendo `end_round = '1'` e terminando o jogo prematuramente
 
 4. **Jogo terminaria após 1 rodada**: Como `end_round` ficaria ativo na primeira rodada, o jogo iria direto para o estado Result
-
-**Solução caso quisesse contagem decremental:**
-- Inicializar o contador em `"1111"` (15) após reset
-- Modificar a condição de TC para `count_reg = "0000"`
 
 ---
 
