@@ -1,0 +1,64 @@
+# Quartus II / Intel FPGA generated files
+db/
+incremental_db/
+output_files/
+simulation/
+greybox_tmp/
+*.qws
+*.bak
+*.rpt
+*.summary
+*.smsg
+*.pin
+*.jdi
+*.cdf
+*.sld
+*.done
+*.sta.rpt
+*.fit.rpt
+*.map.rpt
+*.asm.rpt
+*.tan.rpt
+*.flow.rpt
+*.pow.rpt
+*.drc.rpt
+*.eda.rpt
+
+# Programming files
+*.sof
+*.pof
+*.jic
+*.jam
+*.svf
+
+# Simulation files
+*.vho
+*.vcd
+*.wlf
+work/
+transcript
+modelsim.ini
+*.mpf
+*.mti
+*.vstf
+*.ucdb
+
+# GHDL files
+*.o
+*.cf
+*.ghw
+
+# Backup files
+*~
+*.orig
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE files
+.idea/
+*.swp
+*.swo
+
