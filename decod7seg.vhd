@@ -3,8 +3,8 @@ use ieee.std_logic_1164.all;
 
 entity decod7seg is
     port(
-        C : in  std_logic_vector(3 downto 0); -- valor 0..F
-        F : out std_logic_vector(6 downto 0)  -- segmentos: g f e d c b a (ativo baixo)
+        C : in  std_logic_vector(3 downto 0);
+        F : out std_logic_vector(6 downto 0)
     );
 end entity;
 
