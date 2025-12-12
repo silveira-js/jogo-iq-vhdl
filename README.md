@@ -2,6 +2,10 @@
 
 Projeto desenvolvido para a disciplina de Sistemas Digitais da UFSC. O jogo consiste em um desafio de memória visual onde o jogador deve reproduzir padrões exibidos nos LEDs da placa FPGA DE2.
 
+## 🎥 Demonstração
+
+📺 **Vídeo de apresentação:** [Clique aqui para assistir](URL_DO_VIDEO)
+
 ## 📁 Estrutura do Projeto
 
 ```
