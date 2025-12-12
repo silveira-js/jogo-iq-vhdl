@@ -4,7 +4,7 @@ Projeto desenvolvido para a disciplina de Sistemas Digitais da UFSC. O jogo cons
 
 ## 🎥 Demonstração
 
-📺 **Vídeo de apresentação:** [Clique aqui para assistir](URL_DO_VIDEO)
+📺 **Vídeo de apresentação:** [Clique aqui para assistir](https://www.youtube.com/watch?v=AK_lSBFI42E&feature=youtu.be)
 
 ## 📁 Estrutura do Projeto
 
